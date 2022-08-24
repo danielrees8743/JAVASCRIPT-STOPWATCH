@@ -2,7 +2,7 @@
 :root {
   --orange: #ffa600;
   --grey: #f3f3f3;
-  --white: #fff;
+  --white: rgb(255, 255, 255);
   --base-color: #ffa600;
 }
 
@@ -24,11 +24,29 @@ h1,
 h2,
 h3 {
   font-family: 'Roboto', sans-serif;
-  font-weight: 100;
-  font-size: 2.6em;
+  font-weight: 600;
+  font-size: 3em;
   text-transform: uppercase;
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1),
+    1px 1px 1px rgba(0, 0, 0, 0.5);
+  animation: fadeInOut 1.7s infinite;
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
+#minutes,
 #seconds,
 #tens {
   font-size: 2em;
@@ -46,7 +64,7 @@ button {
   width: 180px;
   margin: 10px;
   outline: none;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 button:hover {
   background-color: var(--white);
